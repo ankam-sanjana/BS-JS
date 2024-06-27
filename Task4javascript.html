@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+        function showdate(){
+                let date=document.getElementById("showtime");
+                date= new Date();
+                const months = [
+                    "January", "February", 
+                    "March", "April", "May", 
+                    "June", "July", "August",
+                    "September", "October", 
+                    "November", "December"
+                ];
+                document.getElementById("date-result").innerHTML=date.getDate()+"/"+months[date.getMonth()]+"/"+date.getFullYear();
+            }
+        
+        function showTime(){
+                let date=document.getElementById("showdate");
+                date= new Date();
+                document.getElementById("time-result").innerHTML=date;
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <button id="showdate" onclick="showdate()">show date</button>
+        <p id="date-result"></p>
+        <button id="showtime" onclick="showtime()">show time</button>
+        <p id="time-result"></p>
+    </center>
+    </body>
+</html>
